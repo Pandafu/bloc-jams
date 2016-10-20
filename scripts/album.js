@@ -39,7 +39,7 @@ var createSongRow = function(songNumber, songName, songLength){
     + '</tr>'
     ;
     
-    return template;
+    return $(template);
 };
 
 var setCurrentAlbum = function(album){
@@ -57,11 +57,13 @@ var setCurrentAlbum = function(album){
     albumImage.setAttribute('src', album.albumArtUrl);
 
     //#3
-    albumSongList.innerHTML = '';
+    $albumSongList.empty();
     
     //#4
     for(var i = 0; i < album.songs.length; i++){
-        albumSongList.innerHTML += createSongRow(i + 1,album.songs[i].title, album.songs[i].duration);
+        //before-->albumSongList.innerHTML += createSongRow(i + 1,album.songs[i].title, album.songs[i].duration);
+        var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
+        $albumSongList.append($newRow);
     }
 };
 
