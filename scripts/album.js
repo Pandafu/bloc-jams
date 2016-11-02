@@ -35,7 +35,7 @@ var createSongRow = function (songNumber, songName, songLength){
     
     var onHover = function(event) {
         //placeholder for function logic
-        var songNumberCell = parseInt($(this).find('.song-item-number'));
+        var songNumberCell = $(this).find('.song-item-number');
         var songNumber = parseInt(songNumberCell.attr('data-song-number'));
         
         if (songNumber !== currentlyPlayingSongNumber){
@@ -45,7 +45,7 @@ var createSongRow = function (songNumber, songName, songLength){
     
     var offHover = function(event){
         //Placeholder for function logic
-        var songNumberCell = parseInt($(this).find('.song-item-number'));
+        var songNumberCell = $(this).find('.song-item-number');
         var songNumber = parseInt(songNumberCell.attr('data-song-number'));
         
         if (songNumber !== currentlyPlayingSongNumber) {
@@ -164,8 +164,8 @@ var previousSong = function() {
 
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
 var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
-var playerBarPlayButton = '<span class= "ion-play"></span>';
-var playerBarPauseButton = '<span class= "ion-pause"></span>';
+var playerBarPlayButton = '<span class="ion-play"></span>';
+var playerBarPauseButton = '<span class="ion-pause"></span>';
 
 //Store state of playing songs
 var currentAlbum = null;
