@@ -224,3 +224,4 @@ var $nextButton = $('.main-controls .next');
     $previousButton.click(previousSong);
     $nextButton.click(nextSong);
 });
+
